@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/seanb/OneDrive/Desktop/Extra/Coding/C++/Cornerstone2/C++Assignment01/cmake-build-debug",
-		"source" : "C:/Users/seanb/OneDrive/Desktop/Extra/Coding/C++/Cornerstone2/C++Assignment01"
+		"build" : "C:/Users/seanb/Documents/Northeastern-GE1501-Cornerstone-of-Engineering-2/Code/C++Assignment01/cmake-build-debug",
+		"source" : "C:/Users/seanb/Documents/Northeastern-GE1501-Cornerstone-of-Engineering-2/Code/C++Assignment01"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 5
+		"minor" : 6
 	}
 }
