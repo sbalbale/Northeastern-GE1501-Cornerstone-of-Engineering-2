@@ -46,7 +46,7 @@ area = 0.25 * sqrt (perimeter * (-a + b + c) * (a - b + c) * (a + b - c) );
 
 % Display the results
 fprintf('Perimeter of this triangle is: \n');
-fprintf('%d\n', s);
+fprintf('%d\n', perimeter);
 fprintf('Area of this triangle is: \n');
 fprintf('%f\n', area);
 
