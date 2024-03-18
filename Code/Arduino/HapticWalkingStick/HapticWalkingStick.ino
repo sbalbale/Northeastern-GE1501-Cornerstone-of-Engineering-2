@@ -22,7 +22,10 @@ long distance2;
 long distance3;
 long distance4;
 
-static int alarmDistance = 20;
+static int alarmDistanceSensor1 = 20;
+static int alarmDistanceSensor2 = 20;
+static int alarmDistanceSensor3 = 20;
+static int alarmDistanceSensor4 = 20;
 
 
 
@@ -68,11 +71,11 @@ void loop()
   Serial.print(distance4);     //print the distance that was measured
   Serial.println(" in");      //print units after the distance
 
-  if (distance1 <= alarmDistance || distance2 <= alarmDistance || distance3 <= alarmDistance || distance4 <= alarmDistance) {                       //if the object is close
-    analogWrite(motorPin, 255);
+  if (distance1 <= alarmDistanceSensor1 || distance2 <= alarmDistanceSensor2 || distance3 <= alarmDistanceSensor3 || distance4 <= alarmDistanceSensor4) {                       //if the object is close
+    analogWrite(motorPin, 255);     //spin the motor at full speed (maximum value)
   }
-  else {
-    analogWrite(motorPin, 0);
+  else {                             //if the object is far away
+    analogWrite(motorPin, 0);       //stop the motor from spinning
   }
 }
 
