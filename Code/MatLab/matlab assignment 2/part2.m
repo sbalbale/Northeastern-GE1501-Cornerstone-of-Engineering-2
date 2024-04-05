@@ -15,11 +15,11 @@ z = x.*exp(-(sin(x)).^2-(sin(y)).^2);
 
 fprintf('for %4.2f <x< %4.2f and %4.2f<y<%4.2f we have %4.2f <z< %4.2f \n',x(1),x(end),y(1),y(end),z(1),z(end));
 
-z_two = x.*exp(-(sin(x)).^2-1^2);
+z_two = x.*exp(-(sin(x)).^2-(1)^2);
 
 figure
 plot(x,z_two,'k')
-title('Plot of z=xe^(-(sin(x))^2-1^2)')
+title('Plot of z=xe^{(-(sin(x))^2-(1)^2)}')
 xlabel('x')
 ylabel('z')
 grid on
