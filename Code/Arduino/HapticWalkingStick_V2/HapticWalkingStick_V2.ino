@@ -1,34 +1,35 @@
-// When an object gets close to any of the ultrasonic sensors spin the motor.
+// When an object gets close to any of the
+// ultrasonic sensors spin the motor.
 
 // variables
 // pins
-//static int motorPin = 11;
+// Ultrasonic sensor pins
+static int echoPin1 = 2;   // Echo pin for sensor 1
+static int trigPin1 = 3;   // Trigger pin for sensor 1
 
-static int echoPin1 = 2;
-static int trigPin1 = 3;
+static int echoPin2 = 4;   // Echo pin for sensor 2
+static int trigPin2 = 5;   // Trigger pin for sensor 2
 
-static int echoPin2 = 4;
-static int trigPin2 = 5;
+static int echoPin3 = 6;   // Echo pin for sensor 3
+static int trigPin3 = 7;   // Trigger pin for sensor 3
 
-static int echoPin3 = 6;
-static int trigPin3 = 7;
+static int echoPin4 = 8;   // Echo pin for sensor 4
+static int trigPin4 = 9;   // Trigger pin for sensor 4
 
-static int echoPin4 = 8;
-static int trigPin4 = 9;
-
-const int AIN1 = 13;           //control pin 1 on the motor driver for the right motor
-const int AIN2 = 12;            //control pin 2 on the motor driver for the right motor
-const int PWMA = 11;            //speed control pin on the motor driver for the right motor
+// Motor driver pins
+const int AIN1 = 13;           //control pin 1 on the motor driver for the motor
+const int AIN2 = 12;            //control pin 2 on the motor driver for the motor
+const int PWMA = 11;            //speed control pin on the motor driver for the motor
 
 // distances
-long distance1;
-long distance2;
-long distance3;
-long distance4;
+// Variables to store the distance measured by each sensor
+long distance1; // Distance measured by sensor 1
+long distance2; // Distance measured by sensor 2
+long distance3; // Distance measured by sensor 3
+long distance4; // Distance measured by sensor 4
 
-static int alarmDistance = 20;
-
-
+// Alarm distance threshold
+static int alarmDistance = 20; // Set the alarm distance to 20 inches
 
 
 void setup()
@@ -47,9 +48,9 @@ void setup()
   pinMode(trigPin4, OUTPUT);   //the trigger pin will output pulses of electricity
   pinMode(echoPin4, INPUT);    //the echo pin will measure the duration of pulses coming back from the distance sensor
 
-  pinMode(AIN1, OUTPUT);
-  pinMode(AIN2, OUTPUT);
-  pinMode(PWMA, OUTPUT);
+  pinMode(AIN1, OUTPUT);       //set the pin that controls the motor to output
+  pinMode(AIN2, OUTPUT);       //set the pin that controls the motor to output
+  pinMode(PWMA, OUTPUT);       //set the pin that controls the motor to output
 }
 
 void loop()
@@ -104,6 +105,7 @@ float getDistance(int funcTrigPin, int funcEchoPin)
   return calculatedDistance;              //send back the distance that was calculated
 }
 
+//SPINS THE MOTOR THE SPECIFIED SPEED AND DIRECTION
 void spinMotor(int motorSpeed)                       //function for driving the right motor
 {
   if (motorSpeed > 0)                                 //if the motor should drive forward (positive speed)
