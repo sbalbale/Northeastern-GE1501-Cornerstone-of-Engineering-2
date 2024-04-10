@@ -37,6 +37,7 @@ B = [12;
       16; 
       17];
 
+% Method 1: Left division (A\B)
 X1 = A\B;
 
 disp('Solution using left division:');
