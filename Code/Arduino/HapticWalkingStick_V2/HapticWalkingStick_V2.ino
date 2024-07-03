@@ -86,7 +86,7 @@ void loop()
 
 //------------------FUNCTIONS-------------------------------
 
-//RETURNS THE DISTANCE MEASURED BY THE HC-SR04 DISTANCE SENSOR
+//RETURNS THE DISTANCE MEASURED BY THE ULTRASONIC SENSOR
 float getDistance(int funcTrigPin, int funcEchoPin)
 {
   float echoTime;                   //variable to store the time it takes for a ping to bounce off an object
